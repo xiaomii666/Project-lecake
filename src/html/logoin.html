@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/component/passport.css"/>
+		<script src="/libs/require/require.js" data-main = "/js/logoin.js"></script>
+	</head>
+	<body>
+		<article class="container main_login main_passport max_width">
+			<header class="global_header mini_header">
+				<div class="wrap">
+					<section class="global_nav">
+						<div class="main_width clear_fix m_aotu">
+							<div class="f_left logo_wrap">
+								<a href="http://localhost:1809">
+									<img src="/static/images/logo_new.png" >
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</header>
+			<div class="main">
+				<section class="main_width">
+					<a href="#" class="banner_link"></a>
+					<div class="loginApp" id="loginApp">
+						<form class="logo_from logo_wrap">
+							<h2 class="clear_fix tab_title">
+								<a href="#" class="f_left text_left active" id="mobile_btn">手机验证登录</a>
+								<a href="#" class="f_right text_right" id="account_btn">账户密码登录</a>
+							</h2>
+							<div class="tab " id="tab_mobile">
+								<label class="clear_fix input_wrap username_wrap">
+									<input type="text" name="username" placeholder="手机号码"/>
+									<span class="error_message undis">*请输入手机号</span>
+								</label>
+								<label class="clear_fix input_wrap yzm_wrap">
+									<input type="text" name="code" id="" placeholder="请输入验证码"/>
+									<a href="#" class="captcha_wrap">
+										<img src="/static/images/captcha.png" >
+									</a>
+									<span class="refresh_btn">换一个</span>
+								</label>
+								<label class="clear_fix input_wrap yzm_wrap">
+									<input type="text" name="code" id="" placeholder="手机验证码"/>
+									<button type="button" class="code_btn">发送验证码</button>
+								</label>
+								<button type="submit" class="submit_btn" id="login_submit">立即登录</button>
+							</div>
+							<div class="tab undis" id="tab_account">
+								<label class="clear_fix input_wrap username_wrap">
+									<input type="text" name="username" placeholder="请输入账号"/>
+									<span class="error_message"></span>
+								</label>
+								<label class="clear_fix input_wrap password_wrap">
+									<input type="password" name="password" placeholder="请输入密码"/>
+									<span class="error_message"></span>
+								</label>
+								<button type="submit" class="submit_btn" id="login_submit2">立即登录</button>
+							</div>
+							<p class="clear_fix bottom_link">
+								<a href="#" class="link_1">忘记密码</a>
+								<a href="http://localhost:1809/html/register.html" class="link_2">立即注册</a>
+								<span class="f_right">还没有账号？</span>
+							</p>
+						</form>
+					</div>
+				</section>
+			</div>
+			<footer class="global_footer" id="global_footer"></footer>
+		</article>
+	</body>
+</html>

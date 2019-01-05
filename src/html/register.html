@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/component/passport.css"/>
+		<script src="/libs/require/require.js" data-main = "/js/register.js"></script>
+	</head>
+	<body>
+		<article class="container main_register main_passport max_width">
+			<header class="global_header mini_header">
+				<div class="wrap">
+					<section class="global_nav">
+						<div class="main_width clear_fix m_aotu">
+							<div class="f_left logo_wrap">
+								<a href="http://localhost:1809">
+									<img src="/static/images/logo_new.png" >
+								</a>
+							</div>
+							<h1 class="f_left">用户注册</h1>
+							<p class="f_right">已有诺心账号？
+								<a href="http://localhost:1809/html/logoin.html" class="logo_link">请登录</a>
+							</p>
+						</div>
+					</section>
+				</div>
+			</header>
+			<form class="main" >
+				<section class="main_width">
+					<div class="form_wrap">
+						<label class="clear_fix input_wrap username_wrap">
+							<input type="text" name="username" id="mobile" placeholder="手机号码"/>
+							<span class="error_message undis">*请输入手机号码</span>
+						</label>
+						<label class="clear_fix input_wrap password_wrap">
+							<input type="password" name="password" id="password" placeholder="6-20位密码"/>
+						</label>
+						<label class="clear_fix input_wrap confirm_wrap">
+							<input type="password" name="password" id="password2" placeholder="确认密码"/>
+						</label>
+						<label class="clear_fix input_wrap yzm_wrap">
+							<input type="text" name="code" id="code" placeholder="手机验证码"/>
+							<button type="button" class="code_btn">发送验证码</button>
+						</label>
+						<button type="submit" class="submit_btn" id="register_submit">立即注册</button>
+						<p class="clear_fix bottom_link">
+							<input type="checkbox"  checked />
+							<label>我已阅读并同意
+								<a href="#">《诺心lecake用户服务协议》</a>
+							</label>
+						</p>
+					</div>
+				</section>
+			</form>
+			<footer class="global_footer" id="global_footer"></footer>
+		</article>
+	</body>
+</html>

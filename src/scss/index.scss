@@ -1,0 +1,202 @@
+@import "../libs/bootstrap/css/bootstrap.min.css";
+@import "./component/base.scss";
+@import "./component/commonList.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+body{
+    margin:0;
+    padding:0;
+}
+ul{
+    margin:0;
+    padding:0;
+
+}
+ul li{
+    float:left;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+/* main-主体内容 */
+.main_home .main {
+	background: #ffffff;
+	position: relative;
+	min-width: 1200px;
+}
+.main_home .main .banner {
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+	cursor: pointer;
+}
+.main_home .main .banner .nav_wrap {
+    position: absolute;
+    width: 1200px;
+    height: 0;
+    left: 50%;
+    margin-left: -600px;
+    top: 50%;
+    display: none;
+    z-index: 10;
+}
+.main_home .main .banner:hover .nav_wrap{
+	display: block;
+}
+.main_home .main .banner .nav {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 50%;
+    margin-top: -50px;
+    background: url(../static/images/banner_arrow.png) no-repeat;
+}
+.main_home .main .banner .prev {
+    background-position: 0 0;
+    left: 0;
+}
+.main_home .main .banner .next{
+    background-position: -50px 0;
+    right: 0;
+}
+.main_home .main .banner .wrapper li{
+	float: left;
+}
+.main_home .main .banner img {
+    float: left;
+    width: 100%;
+}
+.main_home .main .cake_section {
+    position: relative;
+    z-index: 2;
+    margin: -5% auto 20px;
+    padding: 20px;
+    background: #f9f9f9;
+		.link_wrap {
+			text-align: right;
+			margin-top: 18px;
+			font-size: 14px;
+		}
+}
+/*bootstrap初始改变*/
+.main_home .main .cake_section .row{
+	margin-left: 0;
+	margin-right: 0;
+}
+.main_home .main .cake_section .col-md-6,.col-md-3{
+	padding-left: 0;
+	padding-right: 0;
+}
+.main_home .main .toast_section {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+    background: #f9f9f9;
+		.toast_images{
+			margin-bottom: 20px;
+		}
+		.link_wrap {
+			text-align: right;
+			margin-top: 18px;
+			font-size: 14px;
+		}
+}
+.main_home .main .gift_section {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+    background: #f9f9f9;
+		.gift_images{
+			margin-bottom: 20px;
+		}
+		.link_wrap {
+			text-align: right;
+			margin-top: 18px;
+			font-size: 14px;
+		}
+}
+.main_home .main .comment_section {
+    width: 841px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 20px;
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+			padding: 16px 0 20px;
+			text-align: center;
+		}
+		.nav {
+			position: absolute;
+			width: 30px;
+			height: 70px;
+			top: 50%;
+			background: url(../static/images/swiper_arrow.png) no-repeat;
+		}
+		.prev {
+			background-position: 0 0;
+			left: -80px;
+		}
+		.next {
+			background-position: -30px 0;
+			right: -80px;
+		}
+		.comment_item {
+			width: 227px;
+			height: 450px;
+			position: relative;
+			margin-right: 80px;
+			float: left;
+			figure {
+				height: 100px;
+				text-align: center;
+				.img_wrap {
+					width: 68px;
+					height: 68px;
+					margin: 0 auto 6px;
+					img {
+						max-height: 100%;
+						max-width: none;
+						border-radius: 100%;
+					}
+				}
+			}
+			.comment_content{
+				position: relative;
+				height: 320px;
+				padding-top: 60px;
+				background: url(../static/images/comment_bg.png) no-repeat center top;
+				.text {
+					width: 158px;
+					height: 108px;
+					overflow: hidden;
+					line-height: 18px;
+					margin: 0 auto;
+				}
+				.content_time {
+					width: 158px;
+					margin: 0 auto 18px;
+					text-align: right;
+					color: #9c9c9c;
+					font-size: 12px;
+				}
+				.cake_info {
+					text-align: center;
+					height: 124px;
+					position: relative;
+					p {
+						position: absolute;
+						width: 100%;
+						height: 20px;
+						left: 0;
+						bottom: 0;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+		.comment_item:last-of-type {
+			margin-right: 0;
+		}
+}
