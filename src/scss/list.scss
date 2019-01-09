@@ -1,0 +1,47 @@
+@import "../libs/bootstrap/css/bootstrap.min.css";
+@import "./component/base.scss";
+@import "./component/commonList.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+.goods_list {
+	.main {
+	    background: #ffffff;
+		.cake_wrap {
+			font-size: 14px;
+			background: #f9f9f9;
+			padding: 16px 20px;
+			.wrap {
+				background: #ffffff;
+				padding: 10px 16px;
+				text-align: left;
+			}
+			dl dd,dt {
+				line-height: 36px;
+			}
+			dt {
+				width: 70px;
+				float: left;
+			}
+			dd {
+				float: left;
+				margin-right: 40px;
+				cursor: pointer;
+			}
+			dd:hover {
+				color: #ff4001;
+			}
+			dd.active {
+				color: #ff4001;
+			}
+		}
+		.cake_list_wrap{
+			padding: 0 20px 40px;
+			background: #f9f9f9;
+			.row {
+				width: inherit;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

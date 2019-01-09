@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="/css/component/passport.css"/>
-		<script src="/libs/require/require.js" data-main = "/js/logoin.js"></script>
+		<script src="/libs/require/require.js" data-main = "/js/login.js"></script>
 	</head>
 	<body>
 		<article class="container main_login main_passport max_width">
@@ -25,39 +25,41 @@
 				<section class="main_width">
 					<a href="#" class="banner_link"></a>
 					<div class="loginApp" id="loginApp">
-						<form class="logo_from logo_wrap">
+						<form class="logo_wrap">
 							<h2 class="clear_fix tab_title">
-								<a href="#" class="f_left text_left active" id="mobile_btn">手机验证登录</a>
-								<a href="#" class="f_right text_right" id="account_btn">账户密码登录</a>
+								<a href="#" class="tab_btn f_left text_left active" id="account_btn">账户密码登录</a>
+								<a href="#" class="tab_btn f_right text_right" id="mobile_btn">手机验证登录</a>
 							</h2>
-							<div class="tab " id="tab_mobile">
+							<div class="tab" id="tab_account">
 								<label class="clear_fix input_wrap username_wrap">
-									<input type="text" name="username" placeholder="手机号码"/>
-									<span class="error_message undis">*请输入手机号</span>
+									<input type="text" name="username" class="username" placeholder="请输入账号"/>
+									<span class="error_message"></span>
+								</label>
+								<label class="clear_fix input_wrap password_wrap">
+									<input type="password" name="password" class="password" placeholder="请输入密码"/>
+									<span class="error_message"></span>
+								</label>
+								<button type="submit" class="submit_btn">立即登录</button>
+							</div>
+							<div class="tab undis" id="tab_mobile">
+								<label class="clear_fix input_wrap username_wrap">
+									<input type="text" name="username" class="username" placeholder="手机号码"/>
+									<span class="error_message"></span>
 								</label>
 								<label class="clear_fix input_wrap yzm_wrap">
-									<input type="text" name="code" id="" placeholder="请输入验证码"/>
+									<input type="text" name="code"  placeholder="请输入验证码"/>
+									<span class="error_message"></span>
 									<a href="#" class="captcha_wrap">
 										<img src="/static/images/captcha.png" >
 									</a>
 									<span class="refresh_btn">换一个</span>
 								</label>
 								<label class="clear_fix input_wrap yzm_wrap">
-									<input type="text" name="code" id="" placeholder="手机验证码"/>
+									<input type="text" name="code" placeholder="手机验证码"/>
+									<span class="error_message"></span>
 									<button type="button" class="code_btn">发送验证码</button>
 								</label>
-								<button type="submit" class="submit_btn" id="login_submit">立即登录</button>
-							</div>
-							<div class="tab undis" id="tab_account">
-								<label class="clear_fix input_wrap username_wrap">
-									<input type="text" name="username" placeholder="请输入账号"/>
-									<span class="error_message"></span>
-								</label>
-								<label class="clear_fix input_wrap password_wrap">
-									<input type="password" name="password" placeholder="请输入密码"/>
-									<span class="error_message"></span>
-								</label>
-								<button type="submit" class="submit_btn" id="login_submit2">立即登录</button>
+								<button type="submit" class="submit_btn">立即登录</button>
 							</div>
 							<p class="clear_fix bottom_link">
 								<a href="#" class="link_1">忘记密码</a>

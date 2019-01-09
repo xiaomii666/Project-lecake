@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/shopcart.css"/>
+		<script src="/libs/require/require.js" data-main= "/js/shopcart.js"></script>
+	</head>
+	<body>
+		<div class="container main_cart has_content">
+			<header class="global_header_top" id="globalHeader"></header>
+			<div class="main">
+				<section class="login_status">
+					<span>您还没有登录，登录后购物车的商品将保存到您的账号中！</span>
+					<a href="http://localhost:1809/html/login.html">立即登录</a>
+				</section>
+				<section class="top main_width">
+					<a href="http://localhost:1809/html/list.html" class="back_btn">继续购物</a>
+					<h1>您的购物车
+					<span>(<b class="total_count">0</b>)</span></h1>
+				</section>
+				<div class="no_content">
+					<img src="/static/images/no_content.png" >
+					<p>您还没有选购商品，<a href="http://localhost:1809/html/list.html">去逛逛!</a></p>
+				</div>
+				<section class="accessories">
+					<div class="wrap">
+						<h2>精品配件</h2>
+						<div class="list_wrap">
+							<a href="#"></a>
+							<a href="#"></a>
+							<div class="accessories_list"></div>
+						</div>
+					</div>
+				</section>
+				<section class="goods_images">
+					<div class="img"><img src="/static/images/detail_bg.png" ></div>
+					<div class="img"><img src="/static/images/detail_bg.png" ></div>
+				</section>
+			</div>
+			<footer class="global_footer" id="global_footer"></footer>
+		</div>
+	</body>
+</html>

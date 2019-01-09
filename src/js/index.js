@@ -2,6 +2,8 @@
 require(["./requirejs.config"], () => {
 	//引入index需要依赖的模块
 	require(["jquery", "cookie", "header", "footer"], () => {
+		
+		
 		//轮播图
 		let ul = $("#banner ul"),
 			aImgs = ul.children(),

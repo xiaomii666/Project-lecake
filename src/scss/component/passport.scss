@@ -1,8 +1,8 @@
 @import "./base.scss";
 @import "./footer.scss";
 //注册登录
-.active{
-	color: #fe4320 !important;
+body{
+	background: #ebebeb;
 }
 .clear_fix:after{
 	clear:both;
@@ -11,6 +11,9 @@
 	height:0pt;
 	visibility:hidden; 
 	overflow:hidden;	
+}
+.active{
+	color: #fe4320 !important;
 }
 .mini_header {
     height: 82px;
@@ -155,8 +158,18 @@
 		color: #ffffff;
 		font-size: 16px;
 	}
+	.code_yzm{
+		width: 90px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background: #fe4320;
+		font-size: 20px;
+		color: #fff;
+		right: 0;
+		position: absolute;
+	}
 }
-
 //logoin
 .main_login{
 	.main{
@@ -190,6 +203,7 @@
 				margin-bottom: 20px;
 				position: relative;
 				font-size: 14px;
+				font-weight: normal;
 				a{
 					width: 50%;
 					line-height: 28px;

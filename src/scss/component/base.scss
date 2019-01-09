@@ -18,6 +18,7 @@ time, mark, audio, video, button {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+	font-weight: normal;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -34,13 +35,12 @@ body {color:#333;background:#FFF; text-align: center; font: 12px/1.5 Arial, Helv
 .cursorPointer{ cursor:pointer;}
 .textCenter{ text-align:center;}
 a{color:#333;}
-a:hover {color:#ed1c24;text-decoration:none;}
-
+.nav>li>a:hover,a:hover {color:none;text-decoration:none ;}
+.nav>li>a:focus, .nav>li>a:hover {text-decoration: none;background-color: transparent;}
 .dis{display:block;}
 .undis{display:none;}
 .fl{float:left;}
 .fr{float:right;}
-.hide{display: none;}
 .mt5{margin-top:5px;}
 .mt10{margin-top:10px;}
 .mt15{margin-top:15px;}
@@ -165,7 +165,7 @@ a, a:link, a:visited, a:hover, a:active {
 body {
   min-width: 1200px;
   margin: auto;
-  background: #ebebeb;
+  background: transparent;
   overflow-x: hidden;
   font: 12px/1.5 "Hiragino Sans GB", "Microsoft YaHei", Helvetica, '宋体', STFangsong, STXihei, Arial, serif;
   color: #3e3e3e;
@@ -179,8 +179,20 @@ body {
   display: none !important;
 }
 .clear_fix {
+    display: inline-block;
+}
+.clear_fix {
   display: block;
   zoom: 1;
+}
+.clear_fix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    zoom: 1;
 }
 .f_left {
   float: left !important;
@@ -205,6 +217,9 @@ body {
 .auto_wrap {
   word-wrap: break-word;
   word-break: break-all;
+}
+.orange {
+    color: #ff4001 !important;
 }
 .mb_1 {
   margin-bottom: 10px;

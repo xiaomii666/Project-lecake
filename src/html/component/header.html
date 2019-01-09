@@ -1,20 +1,21 @@
 <div class="header_wrap">
 	<section class="top_bar">
 		<div class="main_width clear_fix m_aotu">
-			<div class="f_right">
-				欢迎您，
-				<a href="http://localhost:1809/html/logoin.html" class="ma-le">登录</a>
-				<b>/</b>
-				<a href="http://localhost:1809/html/register.html" style="margin-left: 0">注册</a>
+			<div class="f_right" id="yhm_cookie">
+				<span>欢迎您，
+					<a href="http://localhost:1809/html/login.html" class="ma-le">登录</a>
+					<b>/</b>
+					<a href="http://localhost:1809/html/register.html" style="margin-left: 0">注册</a>
+				</span>
 				<a href="javascript:void (0)" class="wx_btn f_right" >
-					<img src="static/images/qr_code_top.png"/>微信公众号
+					<img src="/static/images/qr_code_top.png" class="wx_img"/>微信公众号
 				</a>
 			</div>
 		</div>
 	</section>
 	<section class="header_content main_width clear_fix">
 			<a href="http://localhost:1809" class="logo_img">
-				<img src="static/images/logo_new.png">
+				<img src="/static/images/logo_new.png">
 			</a>
 			<div class="f_right right_content">
 				<div class="search_wrap">
@@ -24,7 +25,7 @@
 					<button class="search_btn global_search_btn" >搜索</button>
 				</div>
 				<div class="nav_cart_wrap f_right">
-					<a href="#" class="nav_cart">
+					<a href="http://localhost:1809/html/shopcart.html" class="nav_cart">
 						<strong class="global_cart_num hide">
 								<b>0</b>
 						</strong>
@@ -34,19 +35,29 @@
 			</div>
 			<nav class="global_nav">
 				<ul class="nav clear_fix">
-						<li><a href="/">首页</a></li>
-						<li><a href="/">蛋糕</a></li>
+						<li class="active"><a href="http://localhost:1809">首页</a></li>
+						<li><a href="http://localhost:1809/html/list.html">蛋糕</a></li>
 						<li><a href="/">吐司</a></li>
 						<li><a href="/">礼品</a></li>
-						<li><a href="/">企业专区</a></li>
-						<li><a href="/">我的诺心</a></li>
+						<li class="have_inner "><a href="/">企业专区</a>
+							<div class="inner_wrap">
+								<a href="" class="inner_item" >企业采购</a>
+								<a href="" class="inner_item" >合作专区</a>
+							</div>
+						</li>
+						<li class="have_inner "><a href="/">我的诺心</a>
+							<div class="inner_wrap">
+								<a href="http://localhost:1809/html/shopcart.html" class="inner_item" >我的订单</a>
+								<a href="" class="inner_item" >找回密码</a>
+							</div>
+						</li>
 			</nav>
 	</section>
 </div>
 <div class="header_wrap fix_header">
 	<section class="header_content main_width clear_fix m_aotu">
 			<a href="#" class="logo_img">
-				<img src="static/images/logo_new.png">
+				<img src="/static/images/logo_new.png">
 			</a>
 			<div class="f_right right_content">
 				<div class="select_city_wrap">

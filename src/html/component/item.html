@@ -1,0 +1,30 @@
+<ul class= "list_new clear_fix row">
+	<script type="text/html" id="list-template">
+		{{each list item i}}
+		<li class="col-md-3 item_new Christmas">
+			<a href="/html/details.html?id={{item.id}}" target="_blank">
+				<div class="div_img"><img src="{{item.img}}"></div>
+			</a>
+			<div class="list_new_info">
+				<a href="#" target="_blank">
+					<h3 class="no_wrap list_new_name">{{item.title}}</h3>
+				</a>
+				<div class="list_Discount">
+					<p>
+						<span class="vip_price">专享价</span>
+					</p>
+				</div>
+				<div class="price_wrap">
+					<p class="new_price">
+						{{item.price}}
+						<small>￥</small>
+					</p>
+				</div>
+				<a href="#" class="buy_btn">
+					<span>加入购物车</span>
+				</a>
+			</div>
+		</li>
+		{{/each}}
+	</script>
+</ul>
