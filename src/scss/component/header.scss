@@ -1,3 +1,91 @@
+.global_top_cart {
+    display: none;
+    position: absolute;
+    top: 35px;
+    width: 284px;
+    right: -60px;
+    background: #ffffff;
+    z-index: 12;
+    box-shadow: 0 0 10px rgba(222, 222, 222, 0.6);
+	.no_content {
+		text-align: center;
+		padding: 20px 0;
+		color: #949494;
+	}
+	.goods_list {
+		padding: 0 20px;
+		max-height: 350px;
+		overflow: auto;
+		.goods_item {
+			padding: 20px 0;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		.goods_item:last-of-type {
+			border-bottom: 0;
+		}
+		.img_wrap {
+			width: 90px;
+			height: 90px;
+		}
+		.goods_detail {
+			text-align: left;
+			position: relative;
+			margin-left: 100px;
+			height: 90px;
+			h2 {
+				height: 28px;
+				line-height: 28px;
+				font-size: 12px;
+				padding-right: 28px;
+				position: relative;
+			}
+			p {
+				font-size: 12px;
+				line-height: 30px;
+				color: #949494;
+			}
+			p.new_price{
+				font-size: 14px;
+				line-height: 25px;
+				color: #000000;
+			}
+			
+		}
+	}
+	.cart_bottom {
+		text-align: left;
+		background: #f9f9f9;
+		height: 60px;
+		position: relative;
+		p {
+			margin-left: 20px;
+			color: #949494;
+			padding-top: 10px;
+		}
+		p.total_price {
+			line-height: 1;
+			padding-top: 0;
+			font-size: 14px;
+			color: #ff4001;
+			strong {
+				font-size: 20px;
+			}
+		}
+		a {
+			position: absolute;
+			width: 120px;
+			height: 34px;
+			line-height: 34px;
+			text-align: center;
+			color: #ffffff;
+			right: 20px;
+			top: 50%;
+			margin-top: -17px;
+			background: #ff4001;
+			border-radius: 3px;
+		}
+	}
+}
 /* header头部 */
  .header_wrap {
     z-index: 10;
@@ -158,6 +246,9 @@
     height: 100%;
     z-index: 2;
 }
+.header_wrap .header_content .right_content .nav_cart_wrap:hover .global_top_cart {
+	display: block;
+}
  .header_wrap .header_content .right_content .nav_cart_wrap .global_cart_num {
     position: absolute;
     min-width: 14px;
@@ -306,7 +397,7 @@
 .header_wrap.fix_header .header_content .global_nav .nav li:first-child:after {
     bottom: -20px;
 }
-.header_wrap.fix_header .header_content .global_nav .nav li.active > a {
+/* .header_wrap.fix_header .header_content .global_nav .nav li.active > a {
     position: relative;
     left: 20px;
-}
+} */

@@ -28,32 +28,39 @@
 							<a href="#" class="col-md-6"><img src="/static/images/2e06855f0ed213b98a6cf8f64192b62d.jpg" ></a>
 							<a href="#" class="col-md-6"><img src="/static/images/5653bec80b6994bbe03d592539e2dc56.jpg" ></a>
 						</div>
-						<ul class="list_new clear_fix row">
-							<li class="col-md-3 item_new Christmas">
-								<a href="http://localhost:1809/html/details.html" target="_blank">
-									<div class="div_img"><img src="/static/images/list_new_001.jpg" ></div>
-								</a>
-								<div class="list_new_info">
-									<a href="http://localhost:1809/html/details.html" target="_blank">
-										<h3 class="no_wrap list_new_name">雪域牛乳芝士蛋糕</h3>
-									</a>
-									<div class="list_Discount">
-										<p>
-											<span class="Discount">aha会员188元起</span>
-											<span class="vip_price">专享价</span>
-										</p>
-									</div>
-									<div class="price_wrap">
-										<p class="new_price">
-											<small>￥</small>218
-										</p>
-									</div>
-									<a href="#" class="buy_btn">
-										<span>加入购物车</span>
-									</a>
-								</div>
-							</li>
-							<li class="col-md-3 item_new Christmas">
+						<!-- <div  id="new-list-temp"></div> -->
+						<ul class="list_new clear_fix row" id="new-list-temp">
+							<script type="text/html" id="new-list">
+								{{each list item i}}
+										<li class="col-md-3 item_new Christmas">
+											<a href="http://localhost:1809/html/details.html" target="_blank">
+												<div class="div_img"><img src="{{item.img}}" ></div>
+											</a>
+											<div class="list_new_info">
+												<a href="http://localhost:1809/html/details.html" target="_blank">
+													<h3 class="no_wrap list_new_name">{{item.title}}</h3>
+												</a>
+												<div class="list_Discount">
+													<p>
+														<span class="Discount">aha会员188元起</span>
+														<span class="vip_price">专享价</span>
+													</p>
+												</div>
+												<div class="price_wrap">
+													<p class="new_price">
+														{{item.price}}
+														<small>￥</small>
+													</p>
+												</div>
+												<a href="#" class="buy_btn add_cart">
+													<span>加入购物车</span>
+												</a>
+											</div>
+										</li>
+								{{/each}}
+							</script>
+						</ul>
+							<!-- <li class="col-md-3 item_new Christmas">
 								<a href="#" target="_blank">
 									<div class="div_img"><img src="/static/images/list_new_002.jpg" ></div>
 								</a>
@@ -76,8 +83,8 @@
 										<span>加入购物车</span>
 									</a>
 								</div>
-							</li>
-							<li class="col-md-3 item_new Christmas">
+							</li> -->
+							<!-- <li class="col-md-3 item_new Christmas">
 								<a href="#" target="_blank">
 									<div class="div_img"><img src="/static/images/list_new_003.jpg" ></div>
 								</a>
@@ -215,8 +222,8 @@
 										<span>加入购物车</span>
 									</a>
 								</div>
-							</li>
-						</ul>
+							</li> -->
+						<!-- </ul> -->
 						<div class="link_wrap">
 							<a href="#"target="_blank">更多蛋糕&nbsp;></a>
 						</div>

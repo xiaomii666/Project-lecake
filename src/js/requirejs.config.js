@@ -8,7 +8,8 @@ require.config({
 		"footer" : "/js/component/footer",
 		"item" : "/js/component/item",
 		"url" : "/js/component/url",
-		"template" : "/libs/temp/template-web"
+		"template" : "/libs/temp/template-web",
+		"shop" : "/js/component/shop"
 	},
 	shim: {
 		//不符合AMD的规范的模块，垫片

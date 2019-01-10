@@ -1,4 +1,4 @@
-define(["jquery", "template"], ($, template) => {
+define(["jquery", "template", "shop"], ($, template, shop) => {
 	function Item(){
 		
 	}
@@ -19,11 +19,16 @@ define(["jquery", "template"], ($, template) => {
 						let list = res.res_body.data;
 						let html = template("list-template", {list:list});
 						$("#cake_list_item ul").html(html);
+						$(".add_cart").each(function(index, addBtn) {
+							$(addBtn).click(function(e) {
+								e.preventDefault();
+								shop.init(list[index]);
+							});
+						});
 					}
 				}
 			});
 		});
-		
 	}
 	return new Item();
 })

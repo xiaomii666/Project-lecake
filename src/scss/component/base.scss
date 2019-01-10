@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 /*basic*/
 html, body{ height: 100%; position: relative;}
 ol, ul ,li{list-style: none;}
-img, object, embed { max-width: 100%;vertical-align: top;}
+img, object, embed { max-width: 100%; height: 100%; vertical-align: top;}
 fieldset,img {border: 0;}
 table {border-collapse:collapse;border-spacing:0;}
 body {color:#333;background:#FFF; text-align: center; font: 12px/1.5 Arial, Helvetica, sans-serif;}

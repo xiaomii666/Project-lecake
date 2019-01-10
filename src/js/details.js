@@ -11,15 +11,14 @@ require(["../js/requirejs.config"], () => {
 					var searchObj = {};
 					searchObj[searchArr[0]] = searchArr[1];
 					$.ajax({
-					    url: url.baseUrlRap+"/cake-list",
+					    url: url.baseUrlRap+"/details-list",
 					    type: "get",
 					    data: searchObj,
 					    dataType: "json",
 					    success: function(res){
 					        if (res.res_code === 1) {
-					            var details = res.res_body;
+					            var details = res.res_body.data;
 					            var html = template("detail-template", details);
-								console.log(html);
 					            $("#details").html(html);
 					        }
 					    }
