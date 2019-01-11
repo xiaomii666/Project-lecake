@@ -31,7 +31,7 @@ require(["../js/requirejs.config"], () => {
 							success: function (res){
 								if(res.res_code === 1){
 									if(confirm("注册成功，去登录")){
-										window.href = "http://localhost:1809/html/logoin.html";
+										location.href = "http://localhost:1809/html/logoin.html";
 									}
 								}else{
 									$(".error_message").eq(3).html(res.res_message);

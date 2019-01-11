@@ -1,7 +1,7 @@
 //首页业务逻辑
 require(["./requirejs.config"], () => {
 	//引入index需要依赖的模块
-	require(["jquery", "url", "template", "cookie", "header", "footer"], ($, url, template) => {
+	require(["jquery", "url", "template","shop","cookie", "header", "footer"], ($, url, template,shop) => {
 		$(function (){
 			class Home{
 				constructor() {
@@ -57,6 +57,12 @@ require(["./requirejs.config"], () => {
 					            var newli = res.res_body.data;
 					            var html = template("new-list", {list:newli});
 					            $("#new-list-temp").html(html);
+								$(".add_cart").each(function(index, addBtn) {
+									$(addBtn).click(function(e) {
+										e.preventDefault();
+										shop.init(newli[index]);
+									});
+								});
 					        }
 					    }
 					});

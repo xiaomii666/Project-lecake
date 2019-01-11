@@ -5,6 +5,7 @@ define(["jquery", "template", "cookie"], () => {
 			}
 			init(data){
 				this.data = data;
+				console.log(this.data);
 				this.data.num = 1;
 				this.testck();
 			}
@@ -25,8 +26,9 @@ define(["jquery", "template", "cookie"], () => {
 					arr.push(this.data);
 				}
 				$.cookie("shop", JSON.stringify(arr),{path: "/"});
+				location.reload();
 				if(confirm("添加购物车成功,去购物车结算")){
-					window.location.href = "http://localhost:1809/html/shopcart.html";
+					location.href = "http://localhost:1809/html/shopcart.html";
 				}
 				/* var timer = setTimeout(function(){
 				},4000);

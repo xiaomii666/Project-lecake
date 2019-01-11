@@ -7,7 +7,12 @@ require(["../js/requirejs.config"], () => {
 					this.str = "";
 					this.arr = [];
 					this.nli = $(".goods_list");
+					this.arr1 = [];
+					this.adprc = $(".addprice");
+					this.dele = $(".delete_btn");
+					this.flag = false;
 					this.init().testck();
+					this.del();
 				}
 				init(){
 					if($.cookie("user")){
@@ -68,8 +73,20 @@ require(["../js/requirejs.config"], () => {
 							upa = $(".up"),
 							checka = $(".item_message .check_status"),
 							addcheck = $("#add_check"),
-							dele = $(".delete_btn"),
 							addcount = $(".order_btn");
+							$(addcount).click(function (){
+								if($.cookie("user")){
+									location.href = "http://localhost:1809/html/pay.html"
+								}else{
+									alert("请先登录账号！");
+									location.href = "http://localhost:1809/html/login.html"
+								}
+							});
+						_this.spnum.each(function(index, item) {
+							$(item).on("blur", function (){
+								_this.modify(index);
+							});
+						});
 						downa.each(function (index, down){
 							$(down).on("click", function (){
 								_this.reduce(index);
@@ -89,43 +106,101 @@ require(["../js/requirejs.config"], () => {
 							addcheck.toggleClass("active");
 							if(addcheck.hasClass("active")){
 								checka.addClass("active");
+								_this.flag = false;
 							}else{
 								checka.removeClass("active");
+								_this.flag = true;
+								this.arr1 = [];
 							}
+							_this.addchekd();
 						});
 					}else{
 						nulist.removeClass("undis").addClass("dis");
 					}
+					_this.select();
 					_this.count();
+				}
+				//输入框
+				modify(key){
+					this.arr[key].num = this.spnum.eq(key).val();
 				}
 				//减少
 				reduce(key){
 					this.arr[key].num--;
-					this.spnum.eq(key).val(this.arr[key].num);
+					location.reload();
 					$.cookie("shop",JSON.stringify(this.arr),{path: "/"});
-					this.count();
+					this.spnum.eq(key).val(this.arr[key].num);
 					//console.log($.cookie("shop"));
 					if(this.arr[key].num < 1){
-						alert("确定要删除?");
+						alert("最小数量只能为1");
+						location.reload();
+						this.arr[key].num = 1;
+						$.cookie("shop",JSON.stringify(this.arr),{path: "/"});
 					}
+					this.count();
+					this.addcount();
+					this.addchekd();
 				}
 				//增加
 				pluss(key){
 					this.arr[key].num++;
-					this.spnum.eq(key).val(this.arr[key].num);
+					location.reload();
 					$.cookie("shop",JSON.stringify(this.arr),{path: "/"});
+					this.spnum.eq(key).val(this.arr[key].num);
 					this.count();
+					this.addcount();
+					this.addchekd();
 					//console.log($.cookie("shop"));
 				}
 				//单选
 				select(key,ck){
-					if($(ck).toggleClass("active"));
+					$(ck).toggleClass("active");
+					if($(ck).hasClass("active")){
+						this.arr1.push(key);
+						this.addcount();
+					}else{
+						$.each(this.arr1, (index, item) => {
+							if(key === item){
+								this.arr1.splice(index,1);
+							}
+						});
+					}
+					this.addcount(this.arr1);
 				}
 				//计算
 				count(){
 					$.each(this.arr, (index, item) => {
 						var small = item.price * item.num;
 						this.sml.eq(index).text(small);
+					});
+				}
+				//总计
+				addcount(abc){
+					var sum = 0;
+					$.each(abc, (index, item) => {
+						sum += parseInt(this.sml.eq(item).text());
+					});
+					this.adprc.text(sum);
+				}
+				//全选
+				addchekd(){
+					$.each(this.arr, (index, item) =>{
+						this.arr1.push(index);
+					});
+					if(this.flag){
+						this.arr1 = [];
+					}else{
+						var set = [...new Set(this.arr1)];
+					}
+					this.addcount(set);
+				}
+				//删除全部
+				del(){
+					this.dele.click(function (){
+						if(confirm("你确定要删除所有商品并返回购物列表吗？")){
+							$.cookie("shop", $.cookie("shop"), {path: "/",expires: -1});
+							location.href = "http://localhost:1809/html/list.html";
+						}
 					});
 				}
 			}

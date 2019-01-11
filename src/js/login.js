@@ -46,7 +46,6 @@ require(["../js/requirejs.config"], () => {
 				}
 				test(){
 					var _this = this;
-					console.log(22);
 					$(".username").on("blur", function() {
 						if(_this.phone.test($(this).val())){
 							_this.span.eq(1).html("");
