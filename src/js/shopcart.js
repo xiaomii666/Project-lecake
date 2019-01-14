@@ -133,7 +133,6 @@ require(["../js/requirejs.config"], () => {
 					//console.log($.cookie("shop"));
 					if(this.arr[key].num < 1){
 						alert("最小数量只能为1");
-						location.reload();
 						this.arr[key].num = 1;
 						$.cookie("shop",JSON.stringify(this.arr),{path: "/"});
 					}
